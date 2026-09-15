@@ -71,7 +71,7 @@ for eq in equipos:
 doc = fitz.open()
 page = doc.new_page(width=842, height=595)
 page.insert_text((30,30), f"INFORME SEMANAL LaLiga 26/27 - {date.today()} - Jornada auto", fontsize=14)
-page.insert_text((30,50), f"Fuente: API-Football | PJ PTS G E P GF GC DG + Escudo", fontsize=9)
+page.insert_text((30,50), f"Fuente: API-Football | PJ PTS G E P GF GC DG", fontsize=9)
 
 x0, y0 = 30, 75
 col_widths = [35, 35, 150, 35, 35, 30, 30, 30, 35, 35, 35]
