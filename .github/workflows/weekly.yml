@@ -1,0 +1,4 @@
+- name: Generar PDF
+  env:
+    API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+  run: python main.py
