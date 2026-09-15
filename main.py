@@ -51,7 +51,7 @@ page.insert_text((30,50), "Clasificacion: Equipo, PJ, PTS, G, E, P, GF, GC, DG +
 
 x0, y0 = 30, 75
 col_widths = [35, 35, 150, 35, 35, 30, 30, 30, 35, 35, 35]
-headers = ["POS","ESCUDO","EQUIPO","PJ","PTS","G","E","P","GF","GC","DG"]
+headers = ["POS","EQUIPO","PJ","PTS","G","E","P","GF","GC","DG"]
 
 for i,h in enumerate(headers):
     rx = x0 + sum(col_widths[:i])
