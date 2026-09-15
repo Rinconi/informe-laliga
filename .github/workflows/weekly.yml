@@ -1,21 +1,4 @@
-name: Informe Semanal LaLiga
-on:
-  schedule:
-    - cron: '0 8 * * 1'
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      - run: pip install -r requirements.txt
-      - run: python main.py
-      - uses: stefanzweifel/git-auto-commit-action@v6
-        with:
-          commit_message: "Nuevo informe semanal LaLiga"
+- name: Generar PDF
+  env:
+    API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+  run: python main.py
